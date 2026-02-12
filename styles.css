@@ -1,0 +1,211 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  display: grid;
+  place-items: center;
+  min-height: 100vh;
+  background-color: hsl(226, 43%, 10%);
+  color: white;
+  font-family: "Rubik", sans-serif;
+}
+.wrapper {
+  width: 100%;
+  max-width: 1200px;
+}
+.gridContainer {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  column-gap: 35px;
+  row-gap: 35px;
+}
+.item1 {
+  grid-row-start: 1;
+  grid-row-end: 3;
+  background-color: hsl(235, 46%, 20%);
+  border-radius: 15px;
+  padding: 0 0px;
+}
+.man {
+  max-width: 40%;
+  height: auto;
+  border: 3px solid white;
+  border-radius: 50%;
+}
+.report {
+  margin-top: 30px;
+  color: hsl(236, 100%, 87%);
+}
+.name {
+  margin-top: 5px;
+  font-size: 38px;
+}
+.threeRow {
+  margin-top: 30px;
+  margin-bottom: 0px;
+}
+.threeRow div {
+  margin-top: 15px;
+  font-size: 20px;
+  padding: 0 30px;
+  color: hsl(236, 100%, 87%);
+  transition: color 0.2s;
+}
+.square {
+  background-color: green;
+  border-radius: 15px 15px 20px 20px;
+  padding-top: 40px;
+}
+.work {
+  background-color: hsla(15, 100%, 70%, 1);
+  background-image: url("./images/icon-work.svg");
+  background-repeat: no-repeat;
+  background-position: top -10px right 20px;
+  background-size: 70px;
+}
+.play {
+  background-color: hsl(195, 74%, 62%);
+  background-image: url("./images/icon-play.svg");
+  background-repeat: no-repeat;
+  background-position: top -5px right 20px;
+  background-size: 70px;
+}
+.study {
+  background-color: hsl(348, 100%, 68%);
+  background-image: url("./images/icon-study.svg");
+  background-repeat: no-repeat;
+  background-position: top -5px right 20px;
+  background-size: 70px;
+}
+.exercise {
+  background-color: hsl(145, 58%, 55%);
+  background-image: url("./images/icon-exercise.svg");
+  background-repeat: no-repeat;
+  background-position: top 0px right 20px;
+  background-size: 70px;
+}
+.social {
+  background-color: hsl(264, 64%, 52%);
+  background-image: url("./images/icon-social.svg");
+  background-repeat: no-repeat;
+  background-position: top -15px right 20px;
+  background-size: 70px;
+}
+.self-care {
+  background-color: hsl(43, 84%, 65%);
+  background-image: url("./images/icon-self-care.svg");
+  background-repeat: no-repeat;
+  background-position: top -10px right 20px;
+  background-size: 60px;
+}
+.card-content {
+  background-color: hsl(235, 46%, 20%);
+  border-radius: 15px;
+  padding: 30px 35px;
+  transition: background-color 0.3s;
+}
+.card-wrapper {
+  background-color: hsl(246, 80%, 60%);
+  border-radius: 15px;
+  padding: 30px 30px 60px 30px;
+}
+.space-between {
+  display: flex;
+  justify-content: space-between;
+}
+
+.title {
+  font-size: 20px;
+}
+.hour {
+  margin-top: 15px;
+  font-size: 48px;
+}
+.last {
+  margin-top: 5px;
+  color: hsl(236, 100%, 87%);
+}
+.threeRow div.active {
+  color: white;
+}
+
+.threeRow div:hover {
+  color: white;
+  cursor: pointer;
+}
+.card-content:hover {
+  cursor: pointer;
+  background-color: hsl(246, 80%, 60%);
+}
+
+@media (max-width: 1200px) {
+  .wrapper {
+    width: 100%;
+    max-width: 1000px;
+  }
+}
+@media (max-width: 1024px) {
+  .gridContainer {
+    width: 90%;
+    margin: 40px auto;
+    display: flex;
+    flex-direction: column;
+  }
+  .man {
+    max-width: 20%;
+    height: auto;
+  }
+  .threeRow {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 20px 0;
+  }
+  .threeRow div {
+    margin-top: 0;
+  }
+  .report {
+    display: flex;
+  }
+  .card-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+  }
+  .same-line {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 15px;
+  }
+  .last,
+  .hour {
+    margin-top: 0;
+  }
+}
+
+@media (max-width: 430px) {
+  .name {
+    font-size: 28px;
+  }
+  .card-wrapper {
+    padding-bottom: 30px;
+  }
+  .threeRow div {
+    padding: 0 15px;
+  }
+  .card-content {
+    padding: 20px;
+  }
+  .hour {
+    font-size: 34px;
+  }
+  .last {
+    font-size: 13px;
+  }
+  .name {
+    font-size: 24px;
+  }
+}
